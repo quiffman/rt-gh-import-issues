@@ -1,0 +1,12 @@
+diff -ruw a/lib/Net/GitHub/V3/Repos.pm b/lib/Net/GitHub/V3/Repos.pm
+--- a/lib/Net/GitHub/V3/Repos.pm	2016-01-31 05:31:09.000000000 +0000
++++ b/lib/Net/GitHub/V3/Repos.pm	2016-04-06 01:11:44.570522673 +0000
+@@ -222,6 +222,7 @@
+     participation => { url => "/repos/%s/%s/stats/participation", method => 'GET'},
+     punch_card => { url => "/repos/%s/%s/stats/punch_card", method => 'GET'},
+ 
++    import_issues => { url => "/repos/%s/%s/import/issues", method => 'POST', args => 1},
+ );
+ __build_methods(__PACKAGE__, %__methods);
+ 
+
